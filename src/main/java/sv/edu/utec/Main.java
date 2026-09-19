@@ -1,5 +1,8 @@
 package sv.edu.utec;
 
+import sv.edu.utec.api.ProveedorAPI;
+import sv.edu.utec.servicio.SincronizacionService;
+
 import sv.edu.utec.datos.ProductoDAO;
 import sv.edu.utec.modelo.Producto;
 import sv.edu.utec.servicio.InventarioJsonService;
@@ -47,10 +50,32 @@ public class Main {
             System.out.println("\n--- Inventario final ---");
             imprimir(dao.listar());
 
+            // AGREGANDO ESPECIFICACIONES DEL ENUNCIADO 4
+            //1. Instanciar el ProveedorAPI
+            ProveedorAPI proveedorAPI = new ProveedorAPI();
+
+            //2. Instanciar SincronizacionService
+            SincronizacionService syncService = new SincronizacionService(proveedorAPI, dao);
+
+            //3.Invocar sincronizar(10) y guardar el arreglo int[]
+            int[] resultados = syncService.sincronizar(10);
+
+            //4. Mostar el resumen
+            System.out.println("\nSincronizacion con la API -> insertados: " + resultados[0] + "| actualizados: " + resultados[1]);
+
+            //5. Imprimer el inventario resultante
+            System.out.println("\n--- Inventario sincronizado ---");
+            imprimir(dao.listar());
+            //FIN DEL CODIGO AGREGADO
+
         } catch (SQLException e) {
             System.out.println("Error de base de datos: " + e.getMessage());
         } catch (IOException e) {
             System.out.println("Error al leer o escribir el archivo JSON: " + e.getMessage());
+        }catch (InterruptedException e){
+            //6. Capturar InterruptedException sin dejar el catch vacio
+            System.out.println("El hilo fue interrumpido: " + e.getMessage());
+            Thread.currentThread().interrupt();
         }
     }
 
