@@ -296,7 +296,7 @@ git push origin main
 
 ## Parcial 2 — Consumo de API (completar por el estudiante)
 
-**Nombre:Gerardo Emilio Recinos Miranda · **Carnet:** 25-4042-2024
+**Nombre: Gerardo Emilio Recinos Miranda** · **Carnet:** 25-4042-2024
 
 ### Salida de consola (segunda ejecución)
 
