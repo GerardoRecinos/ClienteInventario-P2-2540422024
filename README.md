@@ -296,14 +296,36 @@ git push origin main
 
 ## Parcial 2 — Consumo de API (completar por el estudiante)
 
-**Nombre:** _________________________________ · **Carnet:** ______________
+**Nombre:Gerardo Emilio Recinos Miranda · **Carnet:** 25-4042-2024
 
 ### Salida de consola (segunda ejecución)
 
 ```
-(pegue aquí la salida completa de la segunda ejecución de Main)
+Sincronizacion con la API -> insertados: 0| actualizados: 10
+
+--- Inventario sincronizado ---
+ID    PRODUCTO                    CANTIDAD
+1     Essence Mascara Lash Princess         99
+2     Eyeshadow Palette with Mirror         34
+3     Powder Canister                   89
+4     Red Lipstick                      91
+5     Red Nail Polish                   79
+6     Calvin Klein CK One               29
+7     Chanel Coco Noir Eau De           58
+8     Dior J'adore                      98
+9     Dolce Shine Eau de                 4
+10    Gucci Bloom Eau de                91
 ```
 
 ### Uso de inteligencia artificial
 
-(Declare si utilizó alguna herramienta de IA, cuál y para qué. Si no la utilizó, indíquelo.)
+Se utilizo asistencia de IA (Gemini) con los siguientes propósitos:
+. Depuración de código: Para poder comprender y resolver el manero 
+  obligatorio de exepciones dentro de la clase Main.
+
+. Control de versiones: Como apoyo para corregir errores de codigo 
+  y para redactar de manera clara y concisa los mensajes de commit 
+  dentro de la rama.
+
+. Validación: Para verificar la correcta integración de las clases
+  siguiendo los requerimientos del proyecto.
